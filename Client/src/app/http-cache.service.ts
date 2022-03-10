@@ -25,3 +25,6 @@ export class HttpCacheService {
     this.requests = { };
   }
 }
+
+export class SharedHttpCacheService {
+}
