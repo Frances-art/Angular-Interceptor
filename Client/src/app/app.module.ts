@@ -27,6 +27,7 @@ import { routes } from './router-config';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 // @ts-ignore
 import { CacheInterceptor } from './cache.interceptor';
+import {ApiHttpService} from "./api-http.service";
 
 // @ts-ignore
 @NgModule({
@@ -49,7 +50,8 @@ import { CacheInterceptor } from './cache.interceptor';
 
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: CacheInterceptor, multi: true },
+    ApiHttpService
   ],
   bootstrap: [AppComponent]
 })
