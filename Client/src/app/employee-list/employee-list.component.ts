@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from '../employee';
 // @ts-ignore
 import { EmployeeService } from '../employee.service';
+import {ApiHttpService} from "../api-http.service";
 
 // @ts-ignore
 @Component({
@@ -26,7 +27,7 @@ export class EmployeeListComponent implements OnInit {
     this.filteredEmployees = this.listFilter ? this.performFilter(this.listFilter) : this.employees;
   }
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private employeeService: EmployeeService, private apiHttpService: ApiHttpService) { }
 
   performFilter(filterBy: string): Employee[] {
     filterBy = filterBy.toLocaleLowerCase();
