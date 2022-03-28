@@ -1,9 +1,6 @@
-// @ts-ignore
 import { Injectable } from '@angular/core';
-// @ts-ignore
 import { HttpResponse } from '@angular/common/http';
 
-// @ts-ignore
 @Injectable({
   providedIn: 'root'
 })
@@ -26,5 +23,4 @@ export class HttpCacheService {
   }
 }
 
-export class SharedHttpCacheService {
-}
+

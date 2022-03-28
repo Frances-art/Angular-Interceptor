@@ -20,7 +20,7 @@ export class CacheInterceptor implements HttpInterceptor {
     }
 
     // attempt to retrieve a cached response
-    const cachedResponse: HttpResponse<any> | undefined = this.cacheService.get(req.url);
+    const cachedResponse: HttpResponse<any>  = this.cacheService.get(req.url);
 
 // return cached response
     if (cachedResponse) {

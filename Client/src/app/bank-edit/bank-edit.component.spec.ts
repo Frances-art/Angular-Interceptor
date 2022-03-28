@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmployeeEmployeeEditComponent } from './employee-edit.component';
+import { EmployeeEmployeeEditComponent } from './bank-edit.component';
 
 describe('EmployeeEmployeeEditComponent', () => {
   let component: EmployeeEmployeeEditComponent;

@@ -10,8 +10,8 @@
       </div>
       <div class="col-md-2"></div>
       <div class="col-md-4">
-        <button class="btn btn-primary mr-3" [routerLink]="['/employees/0/edit']">
-          New Employee
+        <button class="btn btn-primary mr-3"  [routerLink]="['/banks/edit/0']">
+          New bank
         </button>
       </div>
     </div>
@@ -21,12 +21,12 @@
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table mb-0" *ngIf="employees && employees.length">
+      <table class="table mb-0" *ngIf="banks && banks.length">
         <thead>
         <tr>
           <th>Name</th>
           <th>Address</th>
-          <th>Gender</th>
+          <th>Contact</th>
           <th>Company</th>
           <th>Designation</th>
           <th></th>
@@ -34,25 +34,25 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let employee of filteredEmployees">
+        <tr *ngFor="let bank of filteredBanks">
           <td>
-            <a [routerLink]="['/employees', employee.id]">
-              {{ employee.name }}
-            </a>
+            <a [routerLink]="['/banks', bank.id ]">
+              {{ bank.name }}
+         </a>
           </td>
-          <td>{{ employee.address }}</td>
-          <td>{{ employee.gender }}</td>
-          <td>{{ employee.company }}</td>
-          <td>{{ employee.designation}} </td>
+          <td>{{ bank.address }}</td>
+          <td>{{ bank.contact }}</td>
+          <td>{{ bank.email }}</td>
+          <td>{{ bank.location}} </td>
           <td>
             <button class="btn btn-outline-primary btn-sm"
-                    [routerLink]="['/employees', employee.id, 'edit']">
+                    routerLink="/banks/edit/{{bank.id}}">
               Edit
             </button>
           </td>
           <td>
             <button class="btn btn-outline-warning btn-sm"
-                    (click)="deleteEmployee(employee.id,  employee.name);">
+                    (click)="deleteEmployee(bank.id,  bank.name);">
               Delete
             </button>
           </td>

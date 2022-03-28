@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EmployeeDetailGuard } from './employee-detail.guard';
+import { BankDetailGuard } from './bank-detail.guard';
 
 describe('EmployeeEmployeeDetailGuard', () => {
-  let guard: EmployeeDetailGuard;
+  let guard: BankDetailGuard;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    guard = TestBed.inject(EmployeeDetailGuard);
+    guard = TestBed.inject(BankDetailGuard);
   });
 
   it('should be created', () => {

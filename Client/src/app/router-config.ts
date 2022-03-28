@@ -1,13 +1,9 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-// @ts-ignore
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-// @ts-ignore
-import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
-// @ts-ignore
-import { EmployeeEditGuard } from './employee-edit.guard';
-// @ts-ignore
-import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
+import {BankListComponent} from "./bank-list/bank-list.component";
+import { BankEditComponent } from './bank-edit/bank-edit.component';
+import { BankEditGuard } from './bank-edit.guard';
+import { BankDetailComponent } from './bank-detail/bank-detail.component';
 
 export const routes: Routes = [
   {
@@ -15,17 +11,17 @@ export const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'employees',
-    component: EmployeeListComponent
+    path: 'banks',
+    component: BankListComponent
   },
   {
-    path: 'employees/:id',
-    component: EmployeeDetailComponent
+    path: 'banks/:id',
+    component: BankDetailComponent
   },
   {
-    path: 'employees/:id/edit',
-    canDeactivate: [EmployeeEditGuard],
-    component: EmployeeEditComponent
+    path: 'banks/edit/:id',
+    canDeactivate: [BankEditGuard],
+    component: BankEditComponent
   },
   {
     path: '',
